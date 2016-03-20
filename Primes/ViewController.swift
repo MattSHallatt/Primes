@@ -13,28 +13,12 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    print("Exhaustive check")
-//    exhaustiveCheck(2)
-//    exhaustiveCheck(3)
-//    exhaustiveCheck(4)
-//    exhaustiveCheck(5)
-//    exhaustiveCheck(6)
-//    exhaustiveCheck(7)
+    print("Exhaustive check")
+    exhaustiveCheck(6)
+    exhaustiveCheck(7)
     
     print("\n\nMersenne check")
-//    checkMersennePrime(2)
-//    checkMersennePrime(3)
-//    checkMersennePrime(4)
     checkMersennePrime(31)
-    
-//    print("\n\nLoop from 1 to 1000")
-//    
-//    var count = 0
-//    for index in 1...1000000 {
-//      let result = exhaustiveCheck(index)
-//      count += result ? 1 : 0
-//    }
-//    print("\(count) primes found between 1 and 1000000")
     
   }
   
