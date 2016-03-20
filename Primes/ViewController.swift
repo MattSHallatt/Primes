@@ -13,20 +13,33 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    print("Exhaustive check")
-    exhaustiveCheck(6)
-    exhaustiveCheck(7)
+//    print("Exhaustive check")
+//    exhaustiveCheck(6)
+//    exhaustiveCheck(7)
     
-    print("\n\nMersenne check")
-    checkMersennePrime(31)
+//    print("\n\nMersenne check")
+//    checkMersennePrime(31)
+    
+//    print("\n\nLucasLehmer check")
+//    checkMeresennePrimeUsingLucasLehmer(13)
     
   }
   
   func checkMersennePrime(power: Int) -> Bool {
+    return exhaustiveCheck(mersennePrimeWithPower(power))
+  }
+  
+  func checkMeresennePrimeUsingLucasLehmer(power: Int) -> Bool {
     
-    let number = pow(2.0, Float(power)) - 1
+    let numbers = Array(LucalLehmerSequence(power: power))
     
-    return exhaustiveCheck(Int(number))
+    print(numbers)
+    
+    return numbers[power - 2] % mersennePrimeWithPower(power) == 0 ? true : false
+  }
+  
+  func mersennePrimeWithPower(power: Int) -> Int {
+    return Int(pow(2.0, Float(power)) - 1)
   }
   
   func exhaustiveCheck(number: Int) -> Bool {
