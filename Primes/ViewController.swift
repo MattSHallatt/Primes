@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 //    checkMersennePrime(31)
     
 //    print("\n\nLucasLehmer check")
-//    checkMeresennePrimeUsingLucasLehmer(13)
+    checkMeresennePrimeUsingLucasLehmer(13)
     
   }
   
